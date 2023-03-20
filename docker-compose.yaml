@@ -1,0 +1,13 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:latest
+    ports:
+      - 3305:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: gql
+      MYSQL_USER: gql
+      MYSQL_PASSWORD: gql
+    volumes:
+      - ./mysql:/docker-entrypoint-initdb.d

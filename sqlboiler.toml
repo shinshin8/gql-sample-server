@@ -1,0 +1,13 @@
+pkgname="db"
+output="graph/db"
+wipe=true
+add-global-variants=false
+no-tests=true
+
+[mysql]
+    dbname="gql"
+    host="127.0.0.1"
+    port=3305
+    user="gql"
+    pass="gql"
+    sslmode="false"
