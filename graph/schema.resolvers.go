@@ -7,7 +7,6 @@ package graph
 import (
 	"context"
 	"fmt"
-
 	"github.com/shinshin8/gql-sample-server/graph/model"
 	"github.com/shinshin8/gql-sample-server/internal"
 )
@@ -24,7 +23,7 @@ func (r *queryResolver) Repository(ctx context.Context, name string, owner strin
 
 // User is the resolver for the user field.
 func (r *queryResolver) User(ctx context.Context, name string) (*model.User, error) {
-	panic(fmt.Errorf("not implemented: User - user"))
+	return r.Srv.GetUserByName(ctx, name)
 }
 
 // Node is the resolver for the node field.
